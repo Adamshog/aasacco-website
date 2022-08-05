@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="M_Adnan" />
+
+    <!-- Document Title -->
+    <title>AASacco</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="rs-plugin/css/settings.css"
+      media="screen"
+    />
+
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="css/registration.css" />
+
+    <!-- Fonts Online -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Raleway:200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="registration-grid-container">
+      <div class="registration-grid-title">
+        Amuca Alumni SACCO Online Registration Portal
+      </div>
+      <div class="registration-grid-confidential">
+        Any information shared on this portal will not be shared with a second
+        party without the consent of the owner
+      </div>
+
+      <div class="registration-grid-personal">
+        <h3>Personal Biodata</h3>
+        <h5>Profile picture *</h5>
+        <input
+          id="personal-picture"
+          class="input-field image-input-field"
+          type="file"
+          accept="image/*"
+          name="image"
+          id="file"
+        />
+        <img id="output" class="input-field" />
+        <h5 id="test">Name *</h5>
+        <input
+          id="personal-name"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Full Name"
+          required
+        />
+        <h5>Date of Birth *</h5>
+        <input
+          id="personal-dob"
+          class="input-field text-input-field"
+          type="date"
+          placeholder="Date of Birth"
+        />
+        <h5>Age *</h5>
+        <input
+          id="personal-age"
+          class="input-field text-input-field"
+          type="number"
+          placeholder="Age"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          maxlength="2"
+        />
+        <h5>Sex *</h5>
+        <select
+          id="personal-sex"
+          name="sex"
+          class="input-field dropdown-input-field"
+        >
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <h5>ID Type *</h5>
+        <select
+          id="personal-id-type"
+          name="id-type"
+          class="dropdown-input-field"
+        >
+          <option value="national">National</option>
+          <option value="other">Other</option>
+        </select>
+        <input
+          id="personal-other-id-type"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Other ID Type"
+        />
+        <h5>ID Number *</h5>
+        <input
+          id="personal-id-number"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="ID Number"
+        />
+        <h5>Occupation *</h5>
+        <input
+          id="personal-occupation"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Occupation"
+        />
+        <h5>Home Address *</h5>
+        <input
+          id="personal-home-address-village"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Village"
+        />
+        <input
+          id="personal-home-address-parish"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Parish"
+        />
+        <input
+          id="personal-home-address-sub-county"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Sub-County"
+        />
+        <input
+          id="personal-home-address-county"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="County"
+        />
+        <input
+          id="personal-home-address-district"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="District"
+        />
+        <input
+          id="personal-home-address-country"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Country"
+        />
+        <h5>Work Address *</h5>
+        <input
+          id="personal-work-address-village"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Village"
+        />
+        <input
+          id="personal-work-address-parish"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Parish"
+        />
+        <input
+          id="personal-work-address-sub-county"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Sub-County"
+        />
+        <input
+          id="personal-work-address-county"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="County"
+        />
+        <input
+          id="personal-work-address-district"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="District"
+        />
+        <input
+          id="personal-work-address-country"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Country"
+        />
+        <h5>Contacts *</h5>
+        <input
+          id="personal-mobile-number"
+          class="input-field text-input-field"
+          type="tel"
+          placeholder="Mobile Number *"
+        />
+        <input
+          id="personal-work-number"
+          class="input-field text-input-field"
+          type="tel"
+          placeholder="Work Number"
+        />
+        <input
+          id="personal-email-address"
+          class="input-field text-input-field"
+          type="email"
+          placeholder="Email Address"
+        />
+      </div>
+
+      <div class="registration-grid-next-of-kin">
+        <h3>Next of Kin</h3>
+        <h5>Name</h5>
+        <input
+          id="nok-name"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Full Name"
+        />
+        <!-- <h5>ID Type</h5>
+        <select id="nok-id-type" name="id-type" class="dropdown-input-field">
+          <option value="national">National</option>
+          <option value="other">Other</option>
+        </select>
+        <input
+          id="nok-other-id-type"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Other ID Type"
+        />
+        <h5>ID Number</h5>
+        <input
+          id="nok-id-number"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="ID Number"
+        /> -->
+        <h5>Relationship</h5>
+        <input
+          id="nok-relationship"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Relationship"
+        />
+        <h5>Address</h5>
+        <input
+          id="nok-address-village"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Village"
+        />
+        <input
+          id="nok-address-parish"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Parish"
+        />
+        <input
+          id="nok-address-sub-county"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Sub-County"
+        />
+        <input
+          id="nok-address-county"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="County"
+        />
+        <input
+          id="nok-address-district"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="District"
+        />
+        <input
+          id="nok-address-country"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Country"
+        />
+        <h5>Contacts *</h5>
+        <input
+          id="nok-mobile-number"
+          class="input-field text-input-field"
+          type="number"
+          placeholder="Mobile Number *"
+        />
+        <input
+          id="nok-work-number"
+          class="input-field text-input-field"
+          type="number"
+          placeholder="Work Number"
+        />
+        <input
+          id="nok-email-address"
+          class="input-field text-input-field"
+          type="email"
+          placeholder="Email"
+        />
+      </div>
+
+      <div class="registration-grid-dependants">
+        <h3>Dependants</h3>
+        <h4>Dependant 1</h4>
+        <h5>Name</h5>
+        <input
+          id="dependant-one-name"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Full Name"
+        />
+        <h5>Age</h5>
+        <input
+          id="dependant-one-age"
+          class="input-field text-input-field"
+          type="number"
+          placeholder="Age"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          maxlength="2"
+        />
+        <h5>Relationship</h5>
+        <input
+          id="dependant-one-relationship"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Relationship"
+        />
+        <h4>Dependant 2</h4>
+        <h5>Name</h5>
+        <input
+          id="dependant-two-name"
+          class="input-field text-input-field"
+          type="email"
+          placeholder="Full Name"
+        />
+        <h5>Age</h5>
+        <input
+          id="dependant-two-age"
+          class="input-field text-input-field"
+          type="number"
+          placeholder="Age"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          maxlength="2"
+        />
+        <h5>Relationship</h5>
+        <input
+          id="dependant-two-relationship"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Relationship"
+        />
+        <h4>Dependant 3</h4>
+        <h5>Name</h5>
+        <input
+          id="dependant-three-name"
+          class="input-field text-input-field"
+          type="email"
+          placeholder="Full Name"
+        />
+        <h5>Age</h5>
+        <input
+          id="dependant-three-age"
+          class="input-field text-input-field"
+          type="number"
+          placeholder="Age"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          maxlength="2"
+        />
+        <h5>Relationship</h5>
+        <input
+          id="dependant-three-relationship"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Relationship"
+        />
+        <!-- <h5>ID Type</h5>
+        <select name="id-type" class="dropdown-input-field">
+          <option value="national-id">National ID</option>
+          <option value="other">Other</option>
+        </select>
+        <input
+          class="input-field text-input-field"
+          type="text"
+          placeholder="ID Type"
+        />
+        <h5>ID Number</h5>
+        <input
+          class="input-field text-input-field"
+          type="text"
+          placeholder="ID Number"
+        /> -->
+      </div>
+
+      <div class="registration-grid-purpose">
+        <h3>Purpose</h3>
+
+        <h5>For what purpose would you want to join the SACCO?</h5>
+
+        <label class="input-field container"
+          >Savings
+          <input id="purpose-checkbox-one" type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="input-field container"
+          >Buy shares for investment
+          <input id="purpose-checkbox-two" type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="input-field container"
+          >Benefit from credit services
+          <input id="purpose-checkbox-three" type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="input-field container"
+          >Others
+          <input id="purpose-checkbox-four" type="checkbox" />
+          <span class="checkmark"></span>
+        </label>
+
+        <h5>Specify Other</h5>
+        <input
+          id="purpose-others"
+          class="input-field text-input-field"
+          type="text"
+          placeholder="Other"
+        />
+      </div>
+
+      <div class="registration-grid-consent">
+        <input id="consent-checkbox" type="checkbox" />
+        <p>
+          By filling this form, I have read and understood the constitution of
+          this SACCO and will abide by them. I also confirm that the information
+          given here are valid to the best of my knowledge
+        </p>
+      </div>
+
+      <div class="registration-grid-submit">
+        <button id="submit-button" type="button">Submit</button>
+      </div>
+    </div>
+
+    <script type="module" src="js/registration.js"></script>
+  </body>
+</html>

@@ -1,0 +1,327 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+.registration-grid-container {
+    display: grid;
+    grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+        "title title title"
+        "confidential confidential confidential"
+        "personal next-of-kin dependats"
+        "personal next-of-kin purpose"
+        "consent consent consent"
+        "submit submit submit"
+}
+
+.registration-grid-title {
+    grid-area: title;
+    background-color: #2d3250;
+    color: white;
+    padding: 30px 20px 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+}
+
+.registration-grid-confidential {
+    grid-area: confidential;
+    background-color: #575B73;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+    font-weight: small;
+    text-align: center;
+}
+
+/* ################################################################# */
+/* ################################################################# */
+
+.registration-grid-personal {
+    grid-area: personal;
+    background-color: #D5D6DC;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.registration-grid-personal h3 {
+    padding-bottom: 10px;
+    align-self: center;
+}
+
+.registration-grid-personal h5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.registration-grid-personal img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+}
+
+.input-field {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.image-input-field {
+    outline: none;
+    width: 100%;
+    font-size: 12px;
+    border: 1px solid #313761;
+    color: #313761;
+    background-color: transparent;
+    font-family: "Raleway", sans-serif;
+    padding: 10px;
+}
+
+.text-input-field {
+    outline: none;
+    width: 100%;
+    font-size: 12px;
+    border: 1px solid #313761;
+    color: #313761;
+    background-color: transparent;
+    font-family: "Raleway", sans-serif;
+    padding: 10px;
+}
+
+.dropdown-input-field {
+    outline: none;
+    width: 100%;
+    font-size: 12px;
+    border: 1px solid #313761;
+    color: #313761;
+    background-color: transparent;
+    font-family: "Raleway", sans-serif;
+    padding: 10px;
+}
+
+/* ################################################################# */
+/* ################################################################# */
+
+.registration-grid-next-of-kin {
+    grid-area: next-of-kin;
+    background-color: #ABADB9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.registration-grid-next-of-kin h3 {
+    padding-bottom: 10px;
+    align-self: center;
+}
+
+.registration-grid-next-of-kin h5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* ################################################################# */
+/* ################################################################# */
+
+.registration-grid-dependants {
+    grid-area: dependats;
+    background-color: #D5D6DC;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.registration-grid-dependants h3 {
+    padding-bottom: 10px;
+    align-self: center;
+}
+
+.registration-grid-dependants h4 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.registration-grid-dependants h5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* ################################################################# */
+/* ################################################################# */
+
+.registration-grid-purpose {
+    grid-area: purpose;
+    background-color: #C0C1CA;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.registration-grid-purpose h3 {
+    padding-bottom: 10px;
+    align-self: center;
+}
+
+.registration-grid-purpose h5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked~.checkmark {
+    background-color: #2d3250;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* ################################################################# */
+/* ################################################################# */
+
+.registration-grid-consent {
+    grid-area: consent;
+    background-color: #676f9d;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.registration-grid-consent p {
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ################################################################# */
+/* ################################################################# */
+
+.registration-grid-submit {
+    grid-area: submit;
+    background-color: #424769;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration-grid-submit button {
+    background-color: #2d3250;
+    width: 50%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+}
+
+.registration-grid-submit button:hover {
+    background-color: #242840;
+    width: 50%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+}
+
+/* ################################################################# */
+/* ################################################################# */
+
+@media screen and (max-width: 750px) {
+    .registration-grid-container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-areas:
+            "title"
+            "confidential"
+            "personal"
+            "next-of-kin"
+            "dependats"
+            "purpose"
+            "consent"
+            "submit"
+    }
+}
+

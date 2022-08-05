@@ -1,0 +1,354 @@
+:root {
+    --bg-light:#9698A7;
+    --bg: #575B73;
+    --dark-bg: #2d3250;
+    --darker-bg:#242840;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+}
+
+.login-page {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 50%;
+    background-color: var(--dark-bg);
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.login-card h3 {
+    margin-bottom: 20px;
+    align-self: center;
+    color: var(--bg-light);
+    text-align: center;
+}
+
+.login-card h4 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-self: center;
+    color: var(--bg-light);
+    text-align: center;
+}
+
+.login-card h5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: var(--bg-light);
+}
+
+.login-card input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    outline: none;
+    width: 100%;
+    font-size: 12px;
+    border: 1px solid var(--bg-light);
+    color: var(--bg-light);
+    background-color: transparent;
+    font-family: "Raleway", sans-serif;
+    padding: 10px;
+}
+
+.login-card button {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: var(--darker-bg);
+    border: 1px solid var(--darker-bg);
+    color: var(--bg);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+}
+
+.login-card button:hover {
+    background-color: #282D48;
+}
+
+.login-card h6 {
+    padding-top: 20px;
+    color: red;
+    align-self: center;
+}
+
+/* ########################################################################### */
+
+.dashboard-page {
+    width: 100%;
+    height: 100vh;
+}
+
+.dashboard-page {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+        "top-bar top-bar"
+        "nav-bar content"
+}
+
+.dashboard-page .top-bar {
+    grid-area: top-bar;
+    background-color: #121420;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 22px -6px rgba(0,0,0,0.75);
+}
+
+.top-bar h2 {
+    color: var(--bg);
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+}
+
+.top-bar button {
+    background-color: transparent;
+    border: 3px solid #282D48;
+    color: var(--bg);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+}
+
+.top-bar button:hover {
+    background-color: #282D48;
+}
+
+.dashboard-page .nav-bar {
+    grid-area: nav-bar;
+    background-color: var(--dark-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 4px 22px -6px rgba(0,0,0,0.75);
+}
+
+.nav-bar button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #121420;
+    border-left: 2px solid #121420;
+    border-right: 2px solid #121420;
+    color: #121420;
+    padding: 15px 32px;
+    text-align: start;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.nav-bar button:hover {
+    background-color: #121420;
+    color: var(--bg);
+}
+
+.dashboard-page .content {
+    grid-area: content;
+    background-color: var(--bg);
+    padding: 30px;
+}
+
+.members-container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-bg);
+    box-shadow: 0px 4px 22px -6px rgba(0,0,0,0.75);
+    overflow: auto;
+}
+
+.table-wrapper {
+    text-align: center;
+    padding: 20px;
+}
+
+.member-item {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 3px solid var(--darker-bg);
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "personal-biodata-picture personal-biodata next-of-kin dependants purpose"
+        "action-buttons action-buttons action-buttons action-buttons action-buttons"
+}
+
+.member-item h4 {
+    color: var(--bg-light);
+    padding-bottom: 10px;
+    align-self: center;
+}
+
+.member-item h5 {
+    color: var(--bg);
+    padding-bottom: 10px;
+}
+
+.member-item p {
+    color: var(--bg-light);
+    padding-bottom: 5px;
+    font-size: 12px;
+}
+
+.member-item span {
+    color: black;
+}
+
+.member-item .personal-biodata-picture {
+    grid-area: personal-biodata-picture;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    margin-right: 20px;
+}
+
+.member-item .personal-biodata-picture .profile_picture {
+    width: 100%;
+    height: 150px;
+    border: 3px solid var(--darker-bg);
+}
+
+.member-item .personal-biodata {
+    grid-area: personal-biodata;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    margin-right: 20px;
+}
+
+.member-item .next-of-kin {
+    grid-area: next-of-kin;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    margin-right: 20px;
+}
+
+.member-item .dependants {
+    grid-area: dependants;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+.member-item .purpose {
+    grid-area: purpose;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.member-item .action-buttons {
+    grid-area: action-buttons;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.member-item .action-buttons button {
+    background-color: transparent;
+    border: 3px solid var(--darker-bg);
+    color: var(--bg);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    width: 49.5%;
+}
+
+.member-item .action-button-approve:hover {
+    background-color: green;
+    color: var(--darker-bg);
+}
+
+.member-item .action-button-reject:hover {
+    background-color: red;
+    color: var(--darker-bg);
+}
+
+@media screen and (max-width: 650px) {
+    .login-page {
+        padding: 20px;
+    }
+
+    .login-card {
+        width: 100%;
+        border-radius: 5px;
+        padding: 50px 20px 50px 20px;
+    }
+
+    .dashboard-page {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "top-bar"
+            "nav-bar" 
+            "content"
+    }
+
+    .member-item {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 3px solid var(--darker-bg);
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+            "personal-biodata-picture"
+            "personal-biodata"
+            "next-of-kin" 
+            "dependants" 
+            "purpose"
+            "action-buttons"
+    }
+}
+
